@@ -12,22 +12,7 @@ class BoundingBox
     @bottom = y
   end
 
-  def hit_x?(x)
-    # binding.pry
-    (x >= left && x <= right) ? true : false
-  end
-
-  def hit_y?(y)
-    (y >= bottom && x <= top) ? true : false
-  end
-
   def contains_point?(x, y)
-    if (x >= left && x <= right) && (y >= bottom && y <= top)
-      return true
-    else
-      return false
-    end
-
-    # hit_x?(x) && hit_y?(y) ? true : false
+    (x >= left && x <= right) && (y >= bottom && y <= top)
   end
 end
